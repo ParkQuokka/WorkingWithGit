@@ -86,7 +86,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1088,611" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1152,2762" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of String)]" Name="TempList" />
     </Sequence.Variables>
@@ -95,20 +95,12 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="640,2484" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="640,2739" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="scg:List(x:String)" Name="UKCites" />
-        <Variable x:TypeArguments="scg:List(x:String)" Name="SpainCities">
-          <Variable.Default>
-            <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="New List(Of String) From {&quot;Madrid&quot;, &quot;valencia&quot;, &quot;Barcelona&quot;}" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String) From {&quot;Madrid&quot;, &quot;valencia&quot;, &quot;Barcelona&quot;}]" Name="SpainCities" />
         <Variable x:TypeArguments="scg:List(x:String)" Name="AllCities" />
-        <Variable x:TypeArguments="scg:IList(x:String)" Name="AllCitiesTitleCase">
-          <Variable.Default>
-            <VisualBasicValue x:TypeArguments="scg:IList(x:String)" ExpressionText="new List(of String)" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="scg:IList(x:String)" Default="[new List(of String)]" Name="AllCitiesTitleCase" />
         <Variable x:TypeArguments="x:String" Name="TitleCaseTemp" />
         <Variable x:TypeArguments="scg:List(x:String)" Default="[New List(Of String) From {&quot;Germany&quot;, &quot;Spain&quot;, &quot;Japan&quot;, &quot;Brazil&quot;, &quot;India&quot;, &quot;China&quot;}]" Name="InputData" />
       </Sequence.Variables>
@@ -117,38 +109,40 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="606,1184" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="606,1416" sap2010:WorkflowViewState.IdRef="CommentOut_1">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="570,1073" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="무시된 액티비티" sap:VirtualizedContainerService.HintSize="570,1305" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap:VirtualizedContainerService.HintSize="536,1013" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence sap:VirtualizedContainerService.HintSize="536,1245" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uasc:BuildCollection x:TypeArguments="x:String" Items="{x:Null}" DisplayName="Build Collection" FirstItem="London" sap:VirtualizedContainerService.HintSize="502,57" sap2010:WorkflowViewState.IdRef="BuildCollection`1_1" Result="[UKCites]">
+              <uasc:BuildCollection x:TypeArguments="x:String" Items="{x:Null}" DisplayName="Build Collection" FirstItem="London" sap:VirtualizedContainerService.HintSize="502,173" sap2010:WorkflowViewState.IdRef="BuildCollection`1_1" Result="[UKCites]">
                 <uasc:BuildCollection.NextItems>
                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                     <InArgument x:TypeArguments="x:String">Manchester</InArgument>
+                    <InArgument x:TypeArguments="x:String">Mancity</InArgument>
+                    <InArgument x:TypeArguments="x:String">Cambridge</InArgument>
                   </scg:List>
                 </uasc:BuildCollection.NextItems>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uasc:BuildCollection>
-              <uasc:MergeCollections x:TypeArguments="x:String" Collection="[UKCites]" DisplayName="Merge Collections" sap:VirtualizedContainerService.HintSize="502,57" sap2010:WorkflowViewState.IdRef="MergeCollections`1_1" Result="[AllCities]" SecondCollection="[SpainCities]">
+              <uasc:MergeCollections x:TypeArguments="x:String" Collection="[UKCites]" DisplayName="Merge Collections" sap:VirtualizedContainerService.HintSize="502,173" sap2010:WorkflowViewState.IdRef="MergeCollections`1_1" Result="[AllCities]" SecondCollection="[SpainCities]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -212,6 +206,12 @@
             </Sequence>
           </Sequence>
         </ui:CommentOut.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
       <Sequence sap:VirtualizedContainerService.HintSize="606,1240" sap2010:WorkflowViewState.IdRef="Sequence_5">
         <Sequence.Variables>
